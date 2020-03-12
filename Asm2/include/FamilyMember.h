@@ -17,7 +17,7 @@ class Member
 		//Constructor
 		Member(string name, double damage) : name(name), damage(damage), behavior(0) {}
 		
-		void attack(Member *enemy);
+		void punish(Member *enemy);
 		void setPunishBehavior(PunishBehavior* behavior);
 		
 		const string& getName() const { return this->name; }

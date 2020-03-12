@@ -15,14 +15,14 @@ int main(int argc, char **argv)
 	DusterPunish sword;
 	player.setPunishBehavior(&sword);
 	
-	orc.attack(&player);
-	dragon.attack(&player);
+	orc.punish(&player);
+	dragon.punish(&player);
 	
-	player.attack(&dragon);
+	player.punish(&dragon);
 	
 	//the dragon is hard to defeat -> switch weapon on runtime
 	player.setPunishBehavior(&axe);
-	player.attack(&dragon);
+	player.punish(&dragon);
 	
 	return 0;
 }

@@ -1,7 +1,7 @@
 #include <iostream>
 #include "FamilyMember.h"
 
-void Member::attack(Member *enemy)
+void Member::punish(Member *enemy)
 {
 	if(this->behavior)
 		this->behavior->performPunish(this, enemy);
