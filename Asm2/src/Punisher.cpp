@@ -3,15 +3,15 @@
 
 void WhipPunish::performPunish(Member *attacker, Member* enemy)
 {
-	cout << attacker->getName() << " crushes " << enemy->getName() << endl;
+	cout << attacker->getName() << " whips " << enemy->getName() << endl;
 };
 
 void HandPunish::performPunish(Member *attacker, Member* enemy)
 {
-	cout << attacker->getName() << " slashes " << enemy->getName() << endl;
+	cout << attacker->getName() << " slaps " << enemy->getName() << endl;
 }
 
 void DusterPunish::performPunish(Member *attacker, Member* enemy)
 {
-	cout << attacker->getName() << " scorches " << enemy->getName() << endl;
+	cout << attacker->getName() << " slashes " << enemy->getName() << endl;
 }

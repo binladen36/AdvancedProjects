@@ -3,26 +3,28 @@
 
 int main(int argc, char **argv)
 {
-	Member orc("Urbul", 5.0);
-	WhipPunish axe;
-	orc.setPunishBehavior(&axe);
+	Member daughter("Girl", 5.0);
+	HandPunish hand;
+	daughter.setPunishBehavior(&hand);
 	
-	Member dragon("Bymarth, The Deathlord", 500.0);
-	HandPunish fire;
-	dragon.setPunishBehavior(&fire);
+	Member son("Boy", 15.0);
+	WhipPunish whip;
+	son.setPunishBehavior(&whip);
 	
-	Dad player("Gandalf", 10.0);
-	DusterPunish sword;
-	player.setPunishBehavior(&sword);
+	Dad dad("Papa", 100.0);
+	DusterPunish duster;
+	dad.setPunishBehavior(&duster);
 	
-	orc.punish(&player);
-	dragon.punish(&player);
+	//punish time
+	dad.punish(&daughter);
+	dad.punish(&son);
+	daughter.punish(&dad);
+	dad.punish(&daughter);
 	
-	player.punish(&dragon);
-	
-	//the dragon is hard to defeat -> switch weapon on runtime
-	player.setPunishBehavior(&axe);
-	player.punish(&dragon);
-	
+	//change punish
+	dad.setPunishBehavior(&whip);
+	dad.punish(&son);
+	dad.punish(&daughter);
+
 	return 0;
 }
