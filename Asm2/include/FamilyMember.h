@@ -33,4 +33,12 @@ class Dad : public Member
 		
 };
 
+class Son : public Member
+{
+	public:
+		Son(string name, double damage) : Member(name, damage) { }
+		
+		
+};
+
 #endif 

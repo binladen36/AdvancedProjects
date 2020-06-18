@@ -1,5 +1,6 @@
 #include <iostream>
 #include "FamilyMember.h"
+#include "Program.h"
 
 int main(int argc, char **argv)
 {
@@ -26,5 +27,8 @@ int main(int argc, char **argv)
 	dad.punish(&son);
 	dad.punish(&daughter);
 
+	Program program;
+    program.run();
+	
 	return 0;
 }
